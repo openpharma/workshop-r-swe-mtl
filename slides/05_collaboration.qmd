@@ -73,8 +73,8 @@ Photo from <a href="https://unsplash.com/@timmossholder?utm_source=unsplash&utm_
 flowchart LR
   A[<font size=4> Daniel v1] --> B[<font size=4> Daniel v2]
   B --> C[<font size=4> Daniel v3]
-  B --> D[<font size=4> Ryan v1]
-  D --> E[<font size=4> Ryan + Daniel v4]
+  B --> D[<font size=4> Doug v1]
+  D --> E[<font size=4> Doug + Daniel v4]
   C --> E
 ```
 
@@ -323,7 +323,7 @@ gitGraph
 sequenceDiagram
     participant A as Daniel
     participant GH as GitHub server
-    participant B as Ryan
+    participant B as Doug
     A->>A: make change locally & commit to <feature>
     A->>GH: push commit
     A->>GH: open pull request

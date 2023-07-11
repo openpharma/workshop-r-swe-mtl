@@ -1,6 +1,6 @@
 ---
 title: "1 Introduction"
-author: "Andrew, Ryan, Daniel"
+author: "Doug, Phil, Daniel"
 description: "Introduction and outline of program.</br>[Photo CC0 by Mabel Amber on pexels.com]{.copyright}"
 image: thumbnails/hello.jpg
 ---
@@ -11,38 +11,33 @@ image: thumbnails/hello.jpg
 
 *Any opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers.*
 
-## Andrew
+## Doug
 
 ::: columns
 ::: {.column width="70%"}
--   Ph.D. in Statistics from Ohio State: nonparametric Bayes for heavy-tailed data
--   Statistician at Novartis for 6 years: Advanced Exploratory Analytics
--   Open-source contributions include R package `OncoBayes2` (Bayesian model-based dose escalation)
--   Member of ASA BIOP working group on Software Engineering (SWE WG), including Bayesian MMRM workstream
+-   TODO
 -   Feel free to connect 
-    [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/andrew-bean-83539116/) 
-    [`r fontawesome::fa("github")`](https://github.com/andrew-bean) 
+    [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/doug-kelkhoff/)
+    [`r fontawesome::fa("github")`](https://github.com/dgkf) 
 :::
 
 ::: {.column width="30%"}
-![](resources/andrew.jpg)
+![](resources/doug.jpg)
 :::
 :::
 
-## Ryan
+## Phil
 
 ::: columns
 ::: {.column width="70%"}
--   Ph.D. in Statistics from University of Connecticut, graduated in 2021
--   Senior biostatistician at Johnson & Johnson since 2021
--   Member of ASA BIOP working group on Software Engineering (SWE WG)
+-   TODO
 -   Feel free to connect 
-    [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/bijuwang/) 
-    [`r fontawesome::fa("github")`](https://github.com/bijuwang)
+    [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/philippe-boileau-773270205/) 
+    [`r fontawesome::fa("github")`](https://github.com/philboileau)
 :::
 
 ::: {.column width="30%"}
-![](resources/biju.jpg)
+![](resources/phil.jpg)
 :::
 :::
 
@@ -86,9 +81,9 @@ readr::read_csv("resources/program.csv", col_types = "cc") |>
 
 ## House-keeping
 
--   Course website at [openpharma.github.io/workshop-r-swe-md](https://openpharma.github.io/workshop-r-swe-md)
+-   Course website at [openpharma.github.io/workshop-r-swe-mtl](https://openpharma.github.io/workshop-r-swe-mtl)
     -   all slides
-    -   sources available at [github.com/openpharma/workshop-r-swe-md](https://github.com/openpharma/workshop-r-swe-md)
+    -   sources available at [github.com/openpharma/workshop-r-swe-mtl](https://github.com/openpharma/workshop-r-swe-mtl)
     -   all materials CC-BY 4.0
 -   We offer a [gitter chat channel](https://matrix.to/#/#workshop-r-swe_community:gitter.im)
     -   use to ask your peers questions
@@ -224,10 +219,10 @@ knitr::include_graphics("resources/pkg_graph.png")
   [`r fontawesome::fa("github")`](https://github.com/kkmann/) 
   [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/kevin-kunzmann-6486a11bb/)
 - In the current version, changes were done by (later authors):
-  Andrew Bean
-  [`r fontawesome::fa("github")`](https://github.com/andrew-bean)
-  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/andrew-bean-83539116/),
-  Biju (Ryan) Wang
-  [`r fontawesome::fa("github")`](https://github.com/bijuwang)
-  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/bijuwang/) 
+  Doug Kelkhoff
+  [`r fontawesome::fa("github")`](https://github.com/dgkf)
+  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/doug-kelkhoff/),
+  Philippe Boileau
+  [`r fontawesome::fa("github")`](https://github.com/philboileau)
+  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/philippe-boileau-773270205/)
 {{< include license_footer.qmd >}}
