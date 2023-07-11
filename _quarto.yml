@@ -4,8 +4,8 @@ project:
 
 website:
   title: "GSWEP4R Workshop"
-  description: "ASA BIOP Course: Good Software Engineering Practice with R"
-  site-url: https://openpharma.github.io/workshop-r-swe-md/
+  description: "Workshop: Good Software Engineering Practice with R"
+  site-url: https://openpharma.github.io/workshop-r-swe-mtl/
   search: true
   navbar:
     left:
@@ -17,10 +17,10 @@ website:
         icon: "file-earmark-slides"
   page-footer:
     center:
-      - text: "About the Software Engineering Working Group"
+      - text: "About the ASA BIOP Software Engineering Working Group"
         href: https://rconsortium.github.io/asa-biop-swe-wg/
       - text: "Source Code on GitHub"
-        href: https://github.com/openpharma/workshop-r-swe-md
+        href: https://github.com/openpharma/workshop-r-swe-mtl
 
 format:
   html:

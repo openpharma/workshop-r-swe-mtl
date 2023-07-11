@@ -11,11 +11,11 @@ Creators (initial authors):
 - Joe Zhu, https://github.com/shajoezhu and http://www.linkedin.com/in/joe-zhu-464b5818
 - Shuang Li, https://github.com/shuangli22
 In the current version, changes were done by (later authors):
-- Andrew Bean, https://www.linkedin.com/in/andrew-bean-83539116/ and https://github.com/andrew-bean
-- Biju (Ryan) Wang, https://www.linkedin.com/in/bijuwang/ and https://github.com/bijuwang
+- Doug Kelkhoff, https://github.com/dgkf and https://www.linkedin.com/in/doug-kelkhoff/
+- Philippe Boileau, https://github.com/philboileau and https://www.linkedin.com/in/philippe-boileau-773270205/
 License: This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
 To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
-The source files are hosted at https://github.com/openpharma/workshop-r-swe-md, which is forked from
+The source files are hosted at https://github.com/openpharma/workshop-r-swe-mtl, which is forked from
 the original version at https://github.com/openpharma/workshop-r-swe.
 Important: To use this work you must provide the name of the creators (initial authors), a link to the material, a link to the license, and indicate if changes were made.
 --> 
@@ -24,10 +24,10 @@ Welcome to the homepage of the workshop *"Good Software Engineering Practice for
 
 ## Next Event
 
-The next event will be held on September 26, 2023 as an in-person workshop at the George Washington University, Rockville, MD, US.
+The next event will be held in October 2023 as an in-person workshop in Montreal, Canada.
 Please register [here](https://todo.com) by TODO.
 
-This event is organized by the ASA BIOP Software Engineering Working Group (SWE WG) as well as the ASA. We are grateful to have received logistic support by ASA BIOP and ASA. The venue is kindly provided by the George Washington University Biostatistics Center. Presenters will be Andrew Bean, Biju Wang and Daniel Sabanes Bove.
+This event is organized by McGill University and the ASA BIOP Software Engineering Working Group (SWE WG). We are grateful to have received logistic support by McGill University. Presenters will be Doug Kelkhoff, Philippe Boileau and Daniel Sabanes Bove.
 
 ## Communication
 
@@ -66,3 +66,4 @@ For the course, participants are required to use their own laptop to be able to 
 - [10th February 2023, Basel, CH](https://kkmann.github.io/workshop-r-swe/)
 - [24th March 2023, Shanghai, CN](https://openpharma.github.io/workshop-r-swe/)
 - [20th July 2023, San José, CA, US](https://openpharma.github.io/workshop-r-swe-sf/)
+- [26th September 2023, Rockville, MD, US](https://openpharma.github.io/workshop-r-swe-md/)
