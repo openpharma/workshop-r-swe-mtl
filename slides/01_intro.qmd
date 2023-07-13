@@ -15,10 +15,14 @@ image: thumbnails/hello.jpg
 
 ::: columns
 ::: {.column width="70%"}
--   TODO
--   Feel free to connect 
+-   Bioengineering Ph.D. from UC Berkeley (2017)
+-   Brief stint as a Data Scientist in the shipping logistics industry
+-   Working as a Data Scientist at Roche
+-   Woefully bad at wetlab biology, turned to computers in shame
+-   Turns out good software is a big bottleneck for statisticians & scientists
+-   Find me on
+    [`r fontawesome::fa("github")` @dgkf](https://github.com/dgkf) and 
     [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/doug-kelkhoff/)
-    [`r fontawesome::fa("github")`](https://github.com/dgkf) 
 :::
 
 ::: {.column width="30%"}
