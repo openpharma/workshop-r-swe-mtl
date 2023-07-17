@@ -35,7 +35,7 @@ image: thumbnails/hello.jpg
 ::: columns
 ::: {.column width="70%"}
 -   Recently completed a Ph.D. in biostatistic at UC Berkeley
--   Former intern at Genentech and Roche supervised Daniel, among others
+-   Former intern at Genentech and Roche (supervised by Daniel, among others)
 -   Associate at the Analysis Group in Montreal
 -   Authored and contributed to a variety of R packages available on Bioconductor, CRAN and GitHub
 -   Feel free to connect 
