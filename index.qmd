@@ -35,7 +35,7 @@ We offer a [gitter chat channel](https://matrix.to/#/#workshop-r-swe_community:g
 
 ## Workshop Program
 
-### Day 1
+### Day 1: 16th October
 
 ```{r}
 #| echo: false
@@ -45,7 +45,7 @@ readr::read_csv("slides/resources/program.csv", col_types = "cc") |>
   knitr::kable(col.names = c("", ""))
 ```
 
-### Day 2
+### Day 2: 17th October
 
 ```{r}
 #| echo: false
