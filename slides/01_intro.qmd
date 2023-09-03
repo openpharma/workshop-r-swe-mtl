@@ -66,7 +66,7 @@ image: thumbnails/hello.jpg
 :::
 :::
 
-## What you will learn today
+## What you will learn here
 
 -   Understand the basic structure of an R package
 -   Create your own R `r fontawesome::fa("cube")`
@@ -77,13 +77,25 @@ image: thumbnails/hello.jpg
 -   Learn how to make an R `r fontawesome::fa("cube")` available to others
 -   Get a starting point for sustainable Shiny app development
 
-## Program outline
+## Program outline: Day 1
 
 ```{r}
 #| echo: false
 #| style: font-size:0.95em!important;
-
 readr::read_csv("resources/program.csv", col_types = "cc") |>
+  dplyr::filter(day == "1") |> 
+  dplyr::select(- day) |> 
+  knitr::kable(col.names = c("", ""))
+```
+
+## Program outline: Day 2
+
+```{r}
+#| echo: false
+#| style: font-size:0.95em!important;
+readr::read_csv("resources/program.csv", col_types = "cc") |>
+  dplyr::filter(day == "2") |> 
+  dplyr::select(- day) |> 
   knitr::kable(col.names = c("", ""))
 ```
 

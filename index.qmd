@@ -20,14 +20,14 @@ the original version at https://github.com/openpharma/workshop-r-swe.
 Important: To use this work you must provide the name of the creators (initial authors), a link to the material, a link to the license, and indicate if changes were made.
 --> 
 
-Welcome to the homepage of the workshop *"Good Software Engineering Practice for R Packages"*. In this course participants will learn hands-on skills and tools to engineer reliable R packages used in biostatistics. The day will be a mix of presentations and exercises. Participants need to be comfortable with writing functions in R and use their own laptops.
+Welcome to the homepage of the workshop *"Good Software Engineering Practice for R Packages"*. In this course participants will learn hands-on skills and tools to engineer reliable R packages used in biostatistics. The workshop will be conducted in two afternoons and will be a mix of presentations and exercises. Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite.
 
-## Next Event
+## Event Details
 
-The next event will be held in October 2023 as an in-person workshop in Montreal, Canada.
-Please register [here](https://todo.com) by TODO.
+The event will be held on Monday 16th and Tuesday 17th October 2023 as an in-person workshop at McGill University, Montreal, Canada.
+Please register [here](https://tinyurl.com/gswep4r-mtl23) by September 15th 2023.
 
-This event is organized by McGill University and the ASA BIOP Software Engineering Working Group (SWE WG). We are grateful to have received logistic support by McGill University. Presenters will be Doug Kelkhoff, Philippe Boileau and Daniel Sabanes Bove.
+This event is organized by the McGill Initiative in Computational Medicine and the ASA BIOP Software Engineering Working Group (SWE WG). We are grateful to have received logistic support by McGill University, in particular Adrien Osakwe and Larisa Morales Soto. The presenters in this workshop will be Doug Kelkhoff, Philippe Boileau and Daniel Sabanes Bove.
 
 ## Communication
 
@@ -35,9 +35,23 @@ We offer a [gitter chat channel](https://matrix.to/#/#workshop-r-swe_community:g
 
 ## Workshop Program
 
+### Day 1
+
 ```{r}
 #| echo: false
 readr::read_csv("slides/resources/program.csv", col_types = "cc") |>
+  dplyr::filter(day == "1") |> 
+  dplyr::select(- day) |> 
+  knitr::kable(col.names = c("", ""))
+```
+
+### Day 2
+
+```{r}
+#| echo: false
+readr::read_csv("slides/resources/program.csv", col_types = "cc") |>
+  dplyr::filter(day == "2") |>
+  dplyr::select(- day) |> 
   knitr::kable(col.names = c("", ""))
 ```
 
