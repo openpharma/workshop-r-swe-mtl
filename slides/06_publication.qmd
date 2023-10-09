@@ -247,4 +247,4 @@ Use the same repository created from template [https://github.com/kkmann/simulat
   Liming Li [`r fontawesome::fa("github")`](https://github.com/clarkliming)
 - In the current version, changes were done by (later authors): 
   TODO: FILL IN, OR IF NOT APPLICABLE DELETE THIS BULLET
-{{< include license_footer.qmd >}}
+{{< include _license_footer.qmd >}}

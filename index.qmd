@@ -27,7 +27,7 @@ Welcome to the homepage of the workshop *"Good Software Engineering Practice for
 The event will be held on Monday 16th and Tuesday 17th October 2023 as an in-person workshop at McGill University, Montreal, Canada.
 Please register [here](https://tinyurl.com/gswep4r-mtl23) by September 15th 2023.
 
-This event is organized by the McGill Initiative in Computational Medicine and the ASA BIOP Software Engineering Working Group (SWE WG). We are grateful to have received logistic support by McGill University, in particular Adrien Osakwe and Larisa Morales Soto. The presenters in this workshop will be Doug Kelkhoff, Philippe Boileau and Daniel Sabanes Bove.
+This event is organized by the McGill Initiative in Computational Medicine and [`openstatsware`](https://rconsortium.github.io/asa-biop-swe-wg/). We are grateful to have received logistic support by McGill University, in particular Adrien Osakwe and Larisa Morales Soto. The presenters in this workshop will be Doug Kelkhoff, Philippe Boileau and Daniel Sabanes Bove.
 
 ## Communication
 
@@ -72,7 +72,7 @@ For the course, participants are required to use their own laptop to be able to 
 -   [GitHub 'Hello World'](https://docs.github.com/en/get-started/quickstart/hello-world) tutorial on how to use GitHub.com (does not require git command line knowledge)
 -   Tutorial on [version control with git and SVN](https://support.posit.co/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN) (we will be using git)
 -   Command line git mini intro [trygit](https://trygit.js.org/)
--   [first steps with git & github by RStudio](https://www.youtube.com/watch?v=jN6tvgt3GK8)
+-   [First steps with git & github by RStudio](https://www.youtube.com/watch?v=jN6tvgt3GK8)
 -   [RStudio cheatsheets/ Git & GitHub](https://github.com/rstudio/cheatsheets/blob/main/git-github.pdf)
 
 ## Past Events
