@@ -394,7 +394,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">3 An R Package Engineering Workflow</h1>
-  <p class="subtitle">Workshop: Good Software Engineering Practice for R Packages</p>
+  <p class="subtitle"><code>openstatsware</code> Workshop: Good Software Engineering Practice for R Packages</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -418,7 +418,7 @@ Daniel
 <p><strong>From an idea to a production-grade R package</strong></p>
 <p>Example scenario: in your daily work, you notice that you need certain one-off scripts again and again.</p>
 <div class="fragment">
-<p><span class="blue"><i class="fa-solid fa-lightbulb fa-2x" aria-label="lightbulb"></i></span> The idea of creating an R package was born because you understood that “copy and paste” R scripts is inefficient and on top of that, you want to share your helpful R functions with colleagues and the world…</p>
+<p><span class="blue"><i class="fa-solid fa-lightbulb fa-2x" aria-label="lightbulb"></i></span> The idea of creating an R package was born because you understood that “copy and paste” R scripts is inefficient, and on top of that, you want to share your helpful R functions with colleagues and the world…</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 
@@ -535,7 +535,7 @@ Daniel
 </div><div class="column" style="width:55%;">
 <ul>
 <li>Fulfill regulatory requirements<sup>1</sup></li>
-<li>Save refactoring time when the <em>PoC</em> becomes the release version</li>
+<li>Save refactoring time when the Proof-of-Concept (<em>PoC</em>) becomes the release version</li>
 <li>You don’t have to be shy any longer about inviting other developers to contribute to the package on <a href="https://github.com/">GitHub</a></li>
 </ul>
 </div>
@@ -601,7 +601,7 @@ Daniel
 <tbody>
 <tr class="odd">
 <td>Duty</td>
-<td style="text-align: left;">shall</td>
+<td style="text-align: left;">must, shall</td>
 <td>“must have”</td>
 </tr>
 <tr class="even">
@@ -611,18 +611,18 @@ Daniel
 </tr>
 <tr class="odd">
 <td>Intention</td>
-<td style="text-align: left;">will</td>
+<td style="text-align: left;">may</td>
 <td>“optional”</td>
 </tr>
 </tbody>
 </table>
-<aside><ol class="aside-footnotes"><li id="fn2"><p><a href="https://amzn.to/3DdwiBe">Rupp, C., &amp; SOPHISTen, die. (2009). Requirements-Engineering und -Management: Professionelle, iterative Anforderungsanalyse für die Praxis (5. Ed.). Carl Hanser Verlag GmbH &amp; Co.&nbsp;KG.</a></p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn2"><p><a href="https://amzn.to/3DdwiBe">Rupp, C., &amp; SOPHISTen, die. (2009). Requirements-Engineering und -Management: Professionelle, iterative Anforderungsanalyse für die Praxis (5. Ed.). Carl Hanser Verlag GmbH &amp; Co.&nbsp;KG.</a> See also: <a href="https://www.plainlanguage.gov/guidelines/conversational/shall-and-must/">plainlanguage.gov</a></p></li></ol></aside></section>
 <section id="example---step-2-design-docs-1" class="slide level2">
 <h2>Example - Step 2: Design docs</h2>
 <p><strong>Purpose and Scope</strong></p>
 <p>The R package <em>simulatr</em> shall enable the creation of reproducible fake data.</p>
 <p><strong>Package Requirements</strong></p>
-<p><em>simulatr</em> <strong>shall</strong> provide a function to generate normal distributed random data for two independent groups. The function <strong>shall</strong> allow flexible definition of sample size per group, mean per group, standard deviation per group. The reproducibility of the simulated data <strong>shall</strong> be ensured via an optional seed It <strong>should</strong> be possible to print the function result. A graphical presentation of the simulated data <strong>will</strong> also be possible.</p>
+<p><em>simulatr</em> <strong>shall</strong> provide a function to generate normal distributed random data for two independent groups. The function <strong>must</strong> allow flexible definition of sample size per group, mean per group, standard deviation per group. The reproducibility of the simulated data <strong>must</strong> be ensured via an optional seed. It <strong>should</strong> be possible to print the function result. The package <strong>may</strong> also facilitate graphical presentation of the simulated data.</p>
 </section>
 <section id="example---step-2-design-docs-2" class="slide level2">
 <h2>Example - Step 2: Design docs</h2>
@@ -734,107 +734,107 @@ $sd2
 [1] 4
 
 $data
-    group       values
-1       1 -0.138111641
-2       1  6.404391349
-3       1  5.491928194
-4       1  3.760305647
-5       1  8.122022014
-6       1  5.222302661
-7       1 -0.828510996
-8       1  4.151437011
-9       1  6.314328630
-10      1  7.065877627
-11      1  6.129144453
-12      1 -0.300981576
-13      1  4.617027298
-14      1  6.965320725
-15      1  7.687712979
-16      1  5.745347773
-17      1  3.934816422
-18      1  4.821551100
-19      1  8.321503717
-20      1  1.060680467
-21      1  7.189445858
-22      1  1.841288158
-23      1  4.544211938
-24      1  0.339652813
-25      1  9.065304387
-26      1  9.140526530
-27      1  7.050401125
-28      1  5.105175691
-29      1 12.716464982
-30      1  3.091482673
-31      1  4.772516046
-32      1  2.428341416
-33      1  0.957347128
-34      1  5.538161251
-35      1  7.364736808
-36      1  8.125067700
-37      1 10.336513219
-38      1  1.811430011
-39      1  6.778471899
-40      1  6.640085428
-41      1 11.952536438
-42      1  3.389896360
-43      1  3.155764502
-44      1 10.568068394
-45      1  3.860907000
-46      1  3.854462039
-47      1  5.020300173
-48      1  0.768878929
-49      1 -2.061412138
-50      1  5.032858411
-51      2  9.387654915
-52      2  9.783457351
-53      2  9.960778280
-54      2  7.068908131
-55      2  6.020747782
-56      2  7.308482123
-57      2  4.329671956
-58      2  4.102965826
-59      2  7.128883722
-60      2  8.192121182
-61      2  5.259168347
-62      2  2.699015051
-63      2  5.215831218
-64      2  6.527590449
-65      2  9.449375739
-66      2  9.214216301
-67      2  8.955973638
-68      2  4.321907713
-69      2  1.023827158
-70      2 10.553157031
-71      2  9.813343395
-72      2  0.011212925
-73      2 12.289900872
-74      2 -0.807714086
-75      2  2.738996435
-76      2  0.672778505
-77      2 10.330596808
-78      2  9.332255022
-79      2  3.270680586
-80      2  7.555860671
-81      2  8.164774028
-82      2 14.266322654
-83      2  9.418695219
-84      2 12.502373032
-85      2 13.390022573
-86      2  7.253410736
-87      2  5.042032585
-88      2  7.136015984
-89      2  6.063931546
-90      2  9.974000716
-91      2 -0.003542812
-92      2  3.135794986
-93      2  0.683327757
-94      2  6.824666470
-95      2 13.052013823
-96      2  6.116645741
-97      2  4.643051594
-98      2 11.949373112
-99      2 11.969832511
-100     2 11.244791334
+    group      values
+1       1  8.86381879
+2       1  9.26114687
+3       1  2.57590396
+4       1  9.07428437
+5       1  1.29559699
+6       1  1.75922565
+7       1  2.36214731
+8       1 -0.13342003
+9       1  5.05977293
+10      1  3.14874244
+11      1  5.06523438
+12      1  3.68822634
+13      1  5.98004238
+14      1  3.61032746
+15      1  7.20885167
+16      1 12.94414444
+17      1  2.47009576
+18      1  4.71509064
+19      1  8.89911916
+20      1  7.07696048
+21      1  4.32583354
+22      1 11.66602991
+23      1  3.35441328
+24      1 -0.90452647
+25      1 -1.67861739
+26      1  2.48348128
+27      1  5.21228945
+28      1 -0.01773548
+29      1  3.23767163
+30      1  8.84339473
+31      1  6.64170247
+32      1  5.60024367
+33      1  7.85125122
+34      1  6.68126034
+35      1  6.08310790
+36      1  6.76387249
+37      1  0.35545860
+38      1  3.32506797
+39      1  1.53164806
+40      1  4.25369536
+41      1  3.74626029
+42      1  2.24263312
+43      1  2.89262847
+44      1  7.64602366
+45      1  5.42570420
+46      1  4.43781878
+47      1  5.66764713
+48      1  6.38940855
+49      1  7.23574175
+50      1  7.54213282
+51      2  0.50504228
+52      2  6.49158246
+53      2 10.90770491
+54      2  3.77562115
+55      2  0.28854832
+56      2 -0.27266345
+57      2 11.30696852
+58      2  6.96794876
+59      2  5.74496240
+60      2  0.59480446
+61      2 10.83135241
+62      2  4.44656983
+63      2 11.99792646
+64      2 -0.86290067
+65      2  8.17965362
+66      2  7.89608980
+67      2  5.82751350
+68      2  5.07630133
+69      2 11.42692454
+70      2  7.04231441
+71      2  1.99626599
+72      2 14.37634264
+73      2  4.91157355
+74      2 10.83950443
+75      2  0.33549686
+76      2  4.22162757
+77      2 -0.88260643
+78      2  6.58695772
+79      2  6.73819807
+80      2  5.79817974
+81      2  0.21595858
+82      2  4.81123868
+83      2  6.39036430
+84      2  6.13728986
+85      2 12.00104197
+86      2  3.82354357
+87      2  7.71362700
+88      2  5.04675024
+89      2  3.91833169
+90      2  1.82743040
+91      2  1.53807788
+92      2  5.77251676
+93      2 12.54461884
+94      2 -4.46355800
+95      2  9.64743411
+96      2  2.54008357
+97      2 16.62861097
+98      2 13.90855845
+99      2 12.80564397
+100     2 14.55963198
 
 attr(,"class")
 [1] "SimulationResult"</code></pre>
@@ -894,16 +894,16 @@ $data
 # A tibble: 100 × 2
    group values
    &lt;dbl&gt;  &lt;dbl&gt;
- 1     1 -0.138
- 2     1  6.40 
- 3     1  5.49 
- 4     1  3.76 
- 5     1  8.12 
- 6     1  5.22 
- 7     1 -0.829
- 8     1  4.15 
- 9     1  6.31 
-10     1  7.07 
+ 1     1  8.86 
+ 2     1  9.26 
+ 3     1  2.58 
+ 4     1  9.07 
+ 5     1  1.30 
+ 6     1  1.76 
+ 7     1  2.36 
+ 8     1 -0.133
+ 9     1  5.06 
+10     1  3.15 
 # ℹ 90 more rows</code></pre>
 </div>
 </div>
@@ -1054,9 +1054,9 @@ Taylor &amp; Francis Ltd.&nbsp;[<a href="https://amzn.to/3uLnxLd">Book</a> | <a 
 <h1>License information</h1>
 <ul>
 <li>Creators (initial authors): Friedrich Pahlke <a href="https://github.com/fpahlke/"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.linkedin.com/in/pahlke/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a></li>
-<li>In the current version, changes were done by (later authors): TODO: FILL IN, OR IF NOT APPLICABLE DELETE THIS BULLET</li>
+<li>In the current version, changes were done by (later authors): Andrew Bean <a href="https://github.com/andrew-bean"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.linkedin.com/in/andrew-bean-83539116/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a></li>
 <li>This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</li>
-<li>The source files are hosted at <a href="https://github.com/openpharma/workshop-r-swe-mtl">github.com/openpharma/workshop-r-swe-md</a>, which is forked from the original version at <a href="https://github.com/openpharma/workshop-r-swe/">github.com/openpharma/workshop-r-swe</a>.</li>
+<li>The source files are hosted at <a href="https://github.com/openpharma/workshop-r-swe-mtl">github.com/openpharma/workshop-r-swe-mtl</a>, which is forked from the original version at <a href="https://github.com/openpharma/workshop-r-swe/">github.com/openpharma/workshop-r-swe</a>.</li>
 <li>Important: To use this work you must provide the name of the creators (initial authors), a link to the material, a link to the license, and indicate if changes were made</li>
 </ul>
 

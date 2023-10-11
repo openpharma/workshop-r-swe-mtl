@@ -1,51 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://openpharma.github.io/workshop-r-swe-mtl/slides/08_conclusion.html</loc>
-    <lastmod>2023-09-03T16:03:21.830Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/workshop-r-swe-mtl/slides/license_footer.html</loc>
-    <lastmod>2023-09-03T16:03:17.154Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/workshop-r-swe-mtl/slides/01_intro.html</loc>
-    <lastmod>2023-09-03T16:03:14.918Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/workshop-r-swe-mtl/slides/05_collaboration.html</loc>
-    <lastmod>2023-09-03T16:03:10.770Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/workshop-r-swe-mtl/slides/04_quality.html</loc>
-    <lastmod>2023-09-03T16:03:07.490Z</lastmod>
+    <loc>https://openpharma.github.io/workshop-r-swe-mtl/index.html</loc>
+    <lastmod>2023-10-11T02:28:45.467Z</lastmod>
   </url>
   <url>
     <loc>https://openpharma.github.io/workshop-r-swe-mtl/listing.html</loc>
-    <lastmod>2023-09-03T16:03:03.758Z</lastmod>
+    <lastmod>2023-10-11T02:28:43.195Z</lastmod>
   </url>
   <url>
-    <loc>https://openpharma.github.io/workshop-r-swe-mtl/index.html</loc>
-    <lastmod>2023-09-03T16:03:02.442Z</lastmod>
+    <loc>https://openpharma.github.io/workshop-r-swe-mtl/slides/01_intro.html</loc>
+    <lastmod>2023-10-11T02:28:39.323Z</lastmod>
   </url>
   <url>
-    <loc>https://openpharma.github.io/workshop-r-swe-mtl/LICENSE.html</loc>
-    <lastmod>2023-09-03T16:03:04.498Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/workshop-r-swe-mtl/slides/06_publication.html</loc>
-    <lastmod>2023-09-03T16:03:09.050Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/workshop-r-swe-mtl/slides/07_shiny.html</loc>
-    <lastmod>2023-09-03T16:03:12.802Z</lastmod>
+    <loc>https://openpharma.github.io/workshop-r-swe-mtl/slides/08_conclusion.html</loc>
+    <lastmod>2023-10-11T02:28:36.059Z</lastmod>
   </url>
   <url>
     <loc>https://openpharma.github.io/workshop-r-swe-mtl/slides/02_r_packages.html</loc>
-    <lastmod>2023-09-03T16:03:16.874Z</lastmod>
+    <lastmod>2023-10-11T02:28:33.259Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openpharma.github.io/workshop-r-swe-mtl/slides/05_collaboration.html</loc>
+    <lastmod>2023-10-11T02:28:27.079Z</lastmod>
   </url>
   <url>
     <loc>https://openpharma.github.io/workshop-r-swe-mtl/slides/03_workflow.html</loc>
-    <lastmod>2023-09-03T16:03:20.742Z</lastmod>
+    <lastmod>2023-10-11T02:28:31.475Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openpharma.github.io/workshop-r-swe-mtl/slides/07_shiny.html</loc>
+    <lastmod>2023-10-11T02:28:35.039Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openpharma.github.io/workshop-r-swe-mtl/slides/06_publication.html</loc>
+    <lastmod>2023-10-11T02:28:37.383Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openpharma.github.io/workshop-r-swe-mtl/slides/04_quality.html</loc>
+    <lastmod>2023-10-11T02:28:41.959Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openpharma.github.io/workshop-r-swe-mtl/LICENSE.html</loc>
+    <lastmod>2023-10-11T02:28:43.903Z</lastmod>
   </url>
 </urlset>
