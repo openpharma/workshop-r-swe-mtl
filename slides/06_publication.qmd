@@ -223,6 +223,18 @@ Example message informing about the rejection of the last
 
 ![](resources/releases.png)
 
+# Bioconductor
+
+## A Note on Bioconductor
+
+- The [Bioconductor](https://www.bioconductor.org/) project develops, supports,
+  and disseminates open source software for the analysis of biological assays
+- Like CRAN, Bioconductor has additional package requirements
+- Packages are peer reviewed by community members
+- New packages and updates to existing packages are released semi-annually
+- Software is expected to be interoperable with other Bioconductor packages
+  through the re-use of common data structures and infrastructure
+
 # References
 
 - [Licensing chapter](https://r-pkgs.org/license.html)
@@ -230,6 +242,7 @@ Example message informing about the rejection of the last
 - [GitHub releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
 - [CRAN Repository Policy](https://cran.r-project.org/web/packages/policies.html)
 - [R-hub builder](https://builder.r-hub.io/)
+- [Bioconductor packages](https://contributions.bioconductor.org/index.html)
 
 # Exercise
 
