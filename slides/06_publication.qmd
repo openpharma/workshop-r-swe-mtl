@@ -244,7 +244,7 @@ Use the same repository created from template [https://github.com/kkmann/simulat
 - Deploy the website through `use_github_action("pkgdown")`
   - (Optional) Check the automatic github page deploy action
   
-# License information
+# License Information
 
 - Creators (initial authors): 
   Daniel Sabanes Bove [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
