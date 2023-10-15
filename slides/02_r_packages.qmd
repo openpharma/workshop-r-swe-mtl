@@ -66,7 +66,7 @@ Nowadays, it's super fast with:
 - *Package*: Choose the name of your package 
   - Not unimportant!
   - Check CRAN to see if your name is available
-- *Title*: Add a Title for Your Package. (Title Case)
+- *Title*: Add a Title for Your Package (Title Case)
 - *Version*: Start with a low package version
   - `Major.Minor.Patch` syntax
 - *Authors@R*: Add authors and maintainer
@@ -219,7 +219,7 @@ export(my_sum)
 
 ## `tests` Folder
 
-- Here we store the unit tests covering the functionality of the package
+- Where store the unit tests covering the functionality of the package
 - Get started with `usethis::use_testthat()` and `usethis::use_test()` and
   populate `tests/testthat` folder with unit tests
 - Rarely, tests cannot be run within `testthat` framework, then these can go
