@@ -1,6 +1,7 @@
 ---
 title: "7 Shiny Development"
 author: "Doug"
+date: "2023-10-17"
 description: "Best Practices for Shiny App Development<br/>[Photo by Pixabay on pexels.com]{.copyright}"
 image: thumbnails/shiny.jpg
 ---

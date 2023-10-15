@@ -1,6 +1,7 @@
 ---
 title: "8 Conclusion"
 author: "Phil"
+date: "2023-10-17"
 description: "Discussion of learning experience, summary of workflow, conclusion and next steps.</br>[Photo by Ann H on pexels.com]{.copyright}"
 image: thumbnails/conclusion.jpg
 ---
