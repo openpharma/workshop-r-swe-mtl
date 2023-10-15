@@ -9,24 +9,26 @@ image: thumbnails/packages.jpg
 
 ## What you know already
 
-- Packages provide a mechanism for loading optional code, data and documentation as needed.
-- A library is a directory into which packages are installed. 
-- `install.packages()` and `R CMD INSTALL` is used to install packages into the library.
-- `library()` is used to load and attach packages from the library.
-  - attach means that the package is put in your `search` list (objects in the package can be used directly).
-- Remember that package $\neq$ library!
+- Packages provide a mechanism for loading optional code, data, and
+  documentation
+- A library is a directory into which packages are installed
+- `install.packages()` is used to install packages into the library
+- `library()` is used to load and attach packages from the library
+  - "Attach" means that the package is put in your `search` list --- objects in
+    the package can be used directly
+- Remember that **package $\neq$ library**
   
 ## What we want to talk about now
 
 - How to write, build, test, and check your own package `r emoji::emoji("blush")`
-- How to do this in a good and sustainable way.
-- Give tips and tricks based on practical experience.
+- How to do this in a methodical and sustainable way
+- Give tips and tricks based on practical experience
 
 # Contents of a package
 
 ## How is a package structured?
 
-Package source = directory with files and subdirectories.
+Package source = directory with files and subdirectories
 
 ::: columns
 ::: {.column width="50%"}
@@ -38,7 +40,7 @@ Package source = directory with files and subdirectories.
 :::
 
 ::: {.column width="50%"}
-- Typically also:
+- Typically also includes:
   - data
   - inst
   - src
@@ -50,9 +52,9 @@ Package source = directory with files and subdirectories.
 
 ## How to get started quickly
 
-Once upon a time, developers would set up this structure manually. `r emoji::emoji("yawning_face")`
+Once upon a time, developers would set up this structure manually `r emoji::emoji("yawning_face")`
 
-Nowadays, it is super fast with:
+Nowadays, it's super fast with:
 
 - `usethis::create_package()` 
 - RStudio > File > New Project > New Directory > R Package
@@ -61,33 +63,36 @@ Nowadays, it is super fast with:
 
 ## `DESCRIPTION` File
 
-- *Package*: Choose the name of your package. 
+- *Package*: Choose the name of your package 
   - Not unimportant!
-  - Check CRAN whether your name is still available.
+  - Check CRAN to see if your name is available
 - *Title*: Add a Title for Your Package. (Title Case)
-- *Version*: Start with a low package version.
+- *Version*: Start with a low package version
   - `Major.Minor.Patch` syntax
-- *Authors@R*: Add authors and maintainer.
-- *Description*: Like an abstract, including references.
+- *Authors@R*: Add authors and maintainer
+- *Description*: Like an abstract, including references
 
 ## `DESCRIPTION` File (cont'd)
 
-- *License*: Important for open sourcing.
-  - Consider permissive licenses such as Apache and MIT.
+- *License*: Important for open sourcing
+  - Consider permissive licenses such as Apache and MIT
 - *Depends*:
-  - Which R version users need to have at least.
-  - Ideally don't put any package here.
-  - Packages will be loaded and attached upon `library` your package.
-- *Imports*: Packages which you import functions, methods, classes from.
-- *Suggests*: Packages for documentation processing (`roxygen2`), running examples, tests (`testthat`), vignettes.
+  - Which R version users need to have at a minimum
+  - Ideally don't put any package here
+  - Packages will be loaded and attached upon `library` your package
+- *Imports*: Packages which you import functions, methods, classes from
+- *Suggests*: Packages for documentation processing (`roxygen2`), running
+  examples, tests (`testthat`), vignettes
 
 ## `R` Folder
 
 - Only contains R code files (recommended to use `.R` suffix)
   - Can create a file with `usethis::use_r("filename")`
-- Assigns R objects, i.e. mostly functions, but could also be constant variables, data sets, etc.
+- Assigns R objects, i.e. mostly functions, but could also be constant
+  variables, data sets, etc.
 - Should not have any side effects, i.e. avoid `require()`, `options()` etc.
-- If certain code needs to be sourced first, use on top of file (which will update the `Collate` field of `DESCRIPTION` automatically).
+- If certain code needs to be sourced first, use on top of file (which will
+  update the `Collate` field of `DESCRIPTION` automatically)
 
 ```{r}
 #| echo: true
@@ -98,10 +103,11 @@ NULL
 
 ## `NAMESPACE` File
 
-- Defines the namespace of the package, to work with R's namespace management system
+- Defines the namespace of the package, to work with R's namespace management
+  system
 - Namespace directives in this file allow to specify:
-  - which objects are exported to users and other packages
-  - which are imported from other packages
+  - Which objects are exported to users and other packages
+  - Which are imported from other packages
   
 ## `NAMESPACE` File (cont'd)
 
@@ -114,20 +120,26 @@ NULL
 
 ## `man` Folder
 
-- Contains documentation files for the objects in the package in the `.Rd` format
+- Contains documentation files for the objects in the package in the `.Rd`
+  format
   - The syntax is a bit similar to `LaTeX`
 - All user level objects should be documented
-- Internal objects don't need to be documented, but may be (and I would recommend it)
-- Once upon a time, developers would set up these `.Rd` files and the `NAMESPACE` manually. `r emoji::emoji("yawning_face")`
+- Internal objects don't need to be documented --- but I recommend it!
+- Once upon a time, developers would set up these `.Rd` files and the
+  `NAMESPACE` manually `r emoji::emoji("yawning_face")`
 - Fortunately, nowadays we have `roxygen2`! `r emoji::emoji("rocket")`
 
 ## `roxygen2` to the Rescue!
 
-- We can include the documentation source directly in the R script, on top of the objects we are documenting
-- Syntax is composed of special comments `#'` and special macros preceded with `@`
-- In RStudio running Build > More > Document will render the `.Rd` files and the `NAMESPACE` file for you
+- We can include the documentation source directly in the R script on top of
+  the objects we are documenting
+- Syntax is composed of special comments `#'` and special macros preceded with
+  `@`
+- In RStudio, running Build > More > Document will render the `.Rd` files and
+  the `NAMESPACE` file for you
 - Get started with `usethis::use_roxygen_md()`
-- Inside a function, click Code > Insert Roxygen Skeleton 
+- Placing your cursor inside a function in RStudio, create a `roxygen2` skeleton
+  with Code > Insert Roxygen Skeleton 
 
 ## Setting up `roxygen2` in your project
 
@@ -208,8 +220,8 @@ export(my_sum)
 ## `tests` Folder
 
 - Here we store the unit tests covering the functionality of the package
-- Get started with `usethis::use_testthat()` and `usethis::use_test()`
-  and populate `tests/testthat` folder with unit tests
+- Get started with `usethis::use_testthat()` and `usethis::use_test()` and
+  populate `tests/testthat` folder with unit tests
 - Rarely, tests cannot be run within `testthat` framework, then these can go
   into R scripts directly in `tests` directory
 - We will look at unit tests in detail later
@@ -238,16 +250,20 @@ export(my_sum)
 
 - Contains sources and headers for any code that needs compilation
 - Should only contain a single language here
-  - Because R uses it, mixing `C`, `C++` and `Fortran` usually works with OS native compilers
+  - Because R uses it, mixing `C`, `C++` and `Fortran` usually works with OS
+    native compilers
 - Much more complex to write and maintain than an R only package
 - Typically only makes sense for 
-  - wrapping existing libraries for use in R
-  - speeding up complex computations - starting point: `Rcpp::Rcpp.package.skeleton()`
+  - Wrapping existing libraries for use in R
+  - Speeding up complex computations --- starting point:
+  `Rcpp::Rcpp.package.skeleton()`
   
 ## `vignettes` Folder
 
-- Special case of documentation files (`pdf` or `html`) created by compiling source files
-- Package users don't need to recompile the vignettes - they are delivered with the package
+- Special case of documentation files (`pdf` or `html`) created by compiling
+  source files
+- Package users don't need to recompile the vignettes - they are delivered with
+  the package
 - Start a new vignette with `usethis::use_vignette()`
   - Starts an `Rmd` vignette, compiled with `knitr`
 - Important for the user to understand the high-level ideas
@@ -273,11 +289,11 @@ export(my_sum)
 - R comes with pre-defined check command for packages: 
   "the R package checker" aka `R CMD check`
 - About 22 checks are run (so quite a lot), including things like:
-  - package can be installed
-  - is the code syntax ok
-  - is the documentation complete
-  - tests are run
-  - examples are being run
+  - can the package be installed?
+  - Is the code syntax ok?
+  - Is the documentation complete?
+  - Do tests run successfully?
+  - Do examples run successfully?
 - In RStudio: Build > Check
 - In the console: `devtools::check()`
   
@@ -295,7 +311,8 @@ export(my_sum)
   `R CMD INSTALL`
 - In RStudio: Build > Install
 - In the console: `devtools::install()`
-- Note: During development it is usually sufficient to use Build > More > Load All
+- Note: During development it's usually sufficient to use Build > More > Load
+  All
   - Runs `devtools::load_all()` 
   - Roughly simulates what happens when package would be installed and loaded
   - **Unexported** objects and helpers under `tests` will also be available
