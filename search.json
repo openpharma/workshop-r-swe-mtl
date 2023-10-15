@@ -109,7 +109,7 @@
     "href": "slides/01_intro.html#house-keeping",
     "title": "1 Introduction",
     "section": "House-keeping",
-    "text": "House-keeping\n\nCourse website at openpharma.github.io/workshop-r-swe-mtl\n\nall slides\nsources available at github.com/openpharma/workshop-r-swe-mtl\nall materials CC-BY 4.0\n\nWe offer a gitter chat channel\n\nuse to ask your peers questions\nwill try to monitor during course\n\nSlido: TODO"
+    "text": "House-keeping\n\nCourse website at openpharma.github.io/workshop-r-swe-mtl\n\nall slides\nsources available at github.com/openpharma/workshop-r-swe-mtl\nall materials CC-BY 4.0\n\nWe offer a gitter chat channel\n\nuse to ask your peers questions\nwill try to monitor during course"
   },
   {
     "objectID": "slides/01_intro.html#what-you-will-need",
@@ -119,11 +119,11 @@
     "text": "What you will need\n\nGithub.com (free) account \nRecommended: posit.cloud \n\nFree tier sufficient\nComes with everything installed\nAlternative: local R development environment with\n\ngit \nRtools/R/Rstudio IDE \n\n\nCuriosity 🦝\nPositive attitude 😄"
   },
   {
-    "objectID": "slides/01_intro.html#enter-slido.com-todo",
-    "href": "slides/01_intro.html#enter-slido.com-todo",
+    "objectID": "slides/01_intro.html#enter-menti.com-5224-0445",
+    "href": "slides/01_intro.html#enter-menti.com-5224-0445",
     "title": "1 Introduction",
-    "section": "Enter slido.com: TODO",
-    "text": "Enter slido.com: TODO"
+    "section": "Enter menti.com: 5224 0445",
+    "text": "Enter menti.com: 5224 0445"
   },
   {
     "objectID": "slides/01_intro.html#what-do-we-mean-by-gswep4r",
@@ -161,11 +161,11 @@
     "text": "GxP + R  = \n\nCore infrastructure packages only through industry\nQuality, burden sharing: open-source pharmaverse and others\nOpen methodological packages can de-risk innovative methods\nR packages make (statistical/methodological) code\n\ntestable (with documented evidence thereof, CFR Part 11)\nreusable\nshareable\neasier to document"
   },
   {
-    "objectID": "slides/08_conclusion.html#enter-slido.com-todo",
-    "href": "slides/08_conclusion.html#enter-slido.com-todo",
+    "objectID": "slides/08_conclusion.html#enter-menti.com-3830-0854",
+    "href": "slides/08_conclusion.html#enter-menti.com-3830-0854",
     "title": "8 Conclusion",
-    "section": "Enter slido.com: TODO",
-    "text": "Enter slido.com: TODO"
+    "section": "Enter menti.com: 3830 0854",
+    "text": "Enter menti.com: 3830 0854"
   },
   {
     "objectID": "slides/08_conclusion.html#r-package-structure",
@@ -641,14 +641,14 @@
     "href": "slides/03_workflow.html#example---step-3-packaging-4",
     "title": "3 An R Package Engineering Workflow",
     "section": "Example - Step 3: Packaging",
-    "text": "Example - Step 3: Packaging\nThe output is impractical, e.g., we need to scroll down:\n\nx &lt;- getSimulatedTwoArmMeans(n1 = 50, n2 = 50, mean1 = 5, mean2 = 7, sd1 = 3, sd2 = 4)\nx\n\n$n1\n[1] 50\n\n$n2\n[1] 50\n\n$mean1\n[1] 5\n\n$mean2\n[1] 7\n\n$sd1\n[1] 3\n\n$sd2\n[1] 4\n\n$data\n    group      values\n1       1  8.86381879\n2       1  9.26114687\n3       1  2.57590396\n4       1  9.07428437\n5       1  1.29559699\n6       1  1.75922565\n7       1  2.36214731\n8       1 -0.13342003\n9       1  5.05977293\n10      1  3.14874244\n11      1  5.06523438\n12      1  3.68822634\n13      1  5.98004238\n14      1  3.61032746\n15      1  7.20885167\n16      1 12.94414444\n17      1  2.47009576\n18      1  4.71509064\n19      1  8.89911916\n20      1  7.07696048\n21      1  4.32583354\n22      1 11.66602991\n23      1  3.35441328\n24      1 -0.90452647\n25      1 -1.67861739\n26      1  2.48348128\n27      1  5.21228945\n28      1 -0.01773548\n29      1  3.23767163\n30      1  8.84339473\n31      1  6.64170247\n32      1  5.60024367\n33      1  7.85125122\n34      1  6.68126034\n35      1  6.08310790\n36      1  6.76387249\n37      1  0.35545860\n38      1  3.32506797\n39      1  1.53164806\n40      1  4.25369536\n41      1  3.74626029\n42      1  2.24263312\n43      1  2.89262847\n44      1  7.64602366\n45      1  5.42570420\n46      1  4.43781878\n47      1  5.66764713\n48      1  6.38940855\n49      1  7.23574175\n50      1  7.54213282\n51      2  0.50504228\n52      2  6.49158246\n53      2 10.90770491\n54      2  3.77562115\n55      2  0.28854832\n56      2 -0.27266345\n57      2 11.30696852\n58      2  6.96794876\n59      2  5.74496240\n60      2  0.59480446\n61      2 10.83135241\n62      2  4.44656983\n63      2 11.99792646\n64      2 -0.86290067\n65      2  8.17965362\n66      2  7.89608980\n67      2  5.82751350\n68      2  5.07630133\n69      2 11.42692454\n70      2  7.04231441\n71      2  1.99626599\n72      2 14.37634264\n73      2  4.91157355\n74      2 10.83950443\n75      2  0.33549686\n76      2  4.22162757\n77      2 -0.88260643\n78      2  6.58695772\n79      2  6.73819807\n80      2  5.79817974\n81      2  0.21595858\n82      2  4.81123868\n83      2  6.39036430\n84      2  6.13728986\n85      2 12.00104197\n86      2  3.82354357\n87      2  7.71362700\n88      2  5.04675024\n89      2  3.91833169\n90      2  1.82743040\n91      2  1.53807788\n92      2  5.77251676\n93      2 12.54461884\n94      2 -4.46355800\n95      2  9.64743411\n96      2  2.54008357\n97      2 16.62861097\n98      2 13.90855845\n99      2 12.80564397\n100     2 14.55963198\n\nattr(,\"class\")\n[1] \"SimulationResult\"\n\n\n\nSolution: implement generic function print"
+    "text": "Example - Step 3: Packaging\nThe output is impractical, e.g., we need to scroll down:\n\nx &lt;- getSimulatedTwoArmMeans(n1 = 50, n2 = 50, mean1 = 5, mean2 = 7, sd1 = 3, sd2 = 4)\nx\n\n$n1\n[1] 50\n\n$n2\n[1] 50\n\n$mean1\n[1] 5\n\n$mean2\n[1] 7\n\n$sd1\n[1] 3\n\n$sd2\n[1] 4\n\n$data\n    group     values\n1       1  7.2693826\n2       1  1.5400392\n3       1  5.4495251\n4       1  5.0082283\n5       1  3.8563950\n6       1  4.6036259\n7       1  6.3534612\n8       1  4.2676201\n9       1 10.8705150\n10      1  7.0818008\n11      1  6.3164233\n12      1 -0.7168156\n13      1  6.3132470\n14      1  1.8397082\n15      1  5.0691472\n16      1  2.9308035\n17      1  3.8499388\n18      1  7.2652806\n19      1  4.0116055\n20      1  7.5055863\n21      1  8.3660359\n22      1  1.6381585\n23      1  2.9448439\n24      1 11.4983826\n25      1  8.9745612\n26      1  1.9269506\n27      1  2.8341826\n28      1  5.5534223\n29      1  0.5869610\n30      1  8.7732923\n31      1  2.1389235\n32      1  4.2417561\n33      1  9.2668229\n34      1  2.2730169\n35      1 13.3995020\n36      1  0.9134889\n37      1  7.1752249\n38      1  2.0549991\n39      1 10.7645201\n40      1  5.6828454\n41      1  6.9449316\n42      1  4.9682908\n43      1  6.3648790\n44      1  5.3058859\n45      1  5.7955887\n46      1  6.3795821\n47      1  8.4276932\n48      1  5.6909825\n49      1  5.9434305\n50      1 -0.7563513\n51      2  4.4537297\n52      2  7.1024791\n53      2  6.8410882\n54      2  5.6822837\n55      2 12.2807983\n56      2  6.7778684\n57      2 11.4166335\n58      2 10.5848270\n59      2  7.1362567\n60      2  5.7625703\n61      2  7.7176786\n62      2  5.7756370\n63      2 14.8693343\n64      2 11.0717759\n65      2  6.1492946\n66      2  7.2050158\n67      2  5.2729428\n68      2 11.5729877\n69      2 13.7856869\n70      2 10.1083914\n71      2 11.7845961\n72      2  9.3211665\n73      2  3.1051709\n74      2 12.9738979\n75      2  5.2188600\n76      2 -0.8045993\n77      2  2.7428611\n78      2 13.5233006\n79      2  6.0786312\n80      2 13.6945091\n81      2  2.3131244\n82      2 10.2466671\n83      2 13.0077486\n84      2  9.8078164\n85      2  5.9339050\n86      2  1.7204006\n87      2  3.2951880\n88      2  9.7459372\n89      2  5.5624555\n90      2 10.4180064\n91      2  8.8512896\n92      2  8.2800458\n93      2  1.8336543\n94      2 10.3121909\n95      2 -1.3635494\n96      2  8.6470040\n97      2 11.1479351\n98      2  6.1898326\n99      2  7.9881402\n100     2  6.7124550\n\nattr(,\"class\")\n[1] \"SimulationResult\"\n\n\n\nSolution: implement generic function print"
   },
   {
     "objectID": "slides/03_workflow.html#example---step-3-packaging-5",
     "href": "slides/03_workflow.html#example---step-3-packaging-5",
     "title": "3 An R Package Engineering Workflow",
     "section": "Example - Step 3: Packaging",
-    "text": "Example - Step 3: Packaging\nGeneric function print:\n\nCodeRoxygenOutput\n\n\n\nprint.SimulationResult &lt;- function(x, ...) {\n    args &lt;- list(n1 = x$n1, n2 = x$n2, \n        mean1 = x$mean1, mean2 = x$mean2, sd1 = x$sd1, sd2 = x$sd2)\n    \n    print(list(\n        args = format(args), \n        data = dplyr::tibble(x$data)\n    ), ...)\n}\nx\n\n\n\n\n#' @title\n#' Print Simulation Result\n#'\n#' @description\n#' Generic function to print a `SimulationResult` object.\n#'\n#' @param x a \\code{SimulationResult} object to print.\n#' @param ... further arguments passed to or from other methods.\n#' \n#' @examples\n#' x &lt;- getSimulatedTwoArmMeans(n1 = 50, n2 = 50, mean1 = 5, \n#'      mean2 = 7, sd1 = 3, sd2 = 4, seed = 123)\n#' print(x)\n#'\n#' @export\n\n\n\n\n\n$args\n   n1    n2 mean1 mean2   sd1   sd2 \n \"50\"  \"50\"   \"5\"   \"7\"   \"3\"   \"4\" \n\n$data\n# A tibble: 100 × 2\n   group values\n   &lt;dbl&gt;  &lt;dbl&gt;\n 1     1  8.86 \n 2     1  9.26 \n 3     1  2.58 \n 4     1  9.07 \n 5     1  1.30 \n 6     1  1.76 \n 7     1  2.36 \n 8     1 -0.133\n 9     1  5.06 \n10     1  3.15 \n# ℹ 90 more rows"
+    "text": "Example - Step 3: Packaging\nGeneric function print:\n\nCodeRoxygenOutput\n\n\n\nprint.SimulationResult &lt;- function(x, ...) {\n    args &lt;- list(n1 = x$n1, n2 = x$n2, \n        mean1 = x$mean1, mean2 = x$mean2, sd1 = x$sd1, sd2 = x$sd2)\n    \n    print(list(\n        args = format(args), \n        data = dplyr::tibble(x$data)\n    ), ...)\n}\nx\n\n\n\n\n#' @title\n#' Print Simulation Result\n#'\n#' @description\n#' Generic function to print a `SimulationResult` object.\n#'\n#' @param x a \\code{SimulationResult} object to print.\n#' @param ... further arguments passed to or from other methods.\n#' \n#' @examples\n#' x &lt;- getSimulatedTwoArmMeans(n1 = 50, n2 = 50, mean1 = 5, \n#'      mean2 = 7, sd1 = 3, sd2 = 4, seed = 123)\n#' print(x)\n#'\n#' @export\n\n\n\n\n\n$args\n   n1    n2 mean1 mean2   sd1   sd2 \n \"50\"  \"50\"   \"5\"   \"7\"   \"3\"   \"4\" \n\n$data\n# A tibble: 100 × 2\n   group values\n   &lt;dbl&gt;  &lt;dbl&gt;\n 1     1   7.27\n 2     1   1.54\n 3     1   5.45\n 4     1   5.01\n 5     1   3.86\n 6     1   4.60\n 7     1   6.35\n 8     1   4.27\n 9     1  10.9 \n10     1   7.08\n# ℹ 90 more rows"
   },
   {
     "objectID": "slides/03_workflow.html#preparation",
