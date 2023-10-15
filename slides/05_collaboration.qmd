@@ -72,10 +72,10 @@ Photo from <a href="https://unsplash.com/@timmossholder?utm_source=unsplash&utm_
 
 ```{mermaid}
 flowchart LR
-  A[<font size=4> Daniel v1] --> B[<font size=4> Daniel v2]
-  B --> C[<font size=4> Daniel v3]
-  B --> D[<font size=4> Doug v1]
-  D --> E[<font size=4> Doug + Daniel v4]
+  A[Daniel v1] --> B[Daniel v2]
+  B --> C[Daniel v3]
+  B --> D[Doug v1]
+  D --> E[Doug + Daniel v4]
   C --> E
 ```
 
@@ -298,7 +298,7 @@ gitGraph
 ## Branches & pull requests
 
 - Branches are a git concept
-- Git platforms add concept of 'pull request' (PR)^[The naming is debatable, ask me in the coffee break.]
+- Git platforms add concept of 'pull request' (PR)
     - PR is 'suggested merge' from branch A to B
     - Usually from 'feature A' to 'main'
 - Allow to **preview problems before merge** and **discuss changes**
