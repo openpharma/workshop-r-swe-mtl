@@ -266,6 +266,7 @@ export(my_sum)
 
 - The first step is to produce the documentation files and `NAMESPACE`
 - In RStudio: Build > More > Document
+- In the console: `devtools::document()`
 
 ## Checking the package
 
@@ -278,19 +279,22 @@ export(my_sum)
   - tests are run
   - examples are being run
 - In RStudio: Build > Check
+- In the console: `devtools::check()`
   
 ## Building the package
 
 - The R package folder can be compressed into a single package file
 - Typically we manually only build "source" package
   - In RStudio: Build > More > Build Source Package
-  - Makes it easy to share the package with others and submit to CRAN
+  - In the console: `devtools::build()`
+- Makes it easy to share the package with others and submit to CRAN
   
 ## Installing the package
 
 - R comes with pre-defined install command for packages: 
   `R CMD INSTALL`
 - In RStudio: Build > Install
+- In the console: `devtools::install()`
 - Note: During development it is usually sufficient to use Build > More > Load All
   - Runs `devtools::load_all()` 
   - Roughly simulates what happens when package would be installed and loaded
