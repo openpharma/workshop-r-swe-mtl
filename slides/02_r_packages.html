@@ -410,34 +410,34 @@ Phil
 
 </section>
 <section id="what-you-know-already" class="slide level2">
-<h2>What you know already</h2>
+<h2>What You Know Already</h2>
 <ul>
-<li>Packages provide a mechanism for loading optional code, data and documentation as needed.</li>
-<li>A library is a directory into which packages are installed.</li>
-<li><code>install.packages()</code> and <code>R CMD INSTALL</code> is used to install packages into the library.</li>
-<li><code>library()</code> is used to load and attach packages from the library.
+<li>Packages provide a mechanism for loading optional code, data, and documentation</li>
+<li>A library is a directory into which packages are installed</li>
+<li><code>install.packages()</code> is used to install packages into the library</li>
+<li><code>library()</code> is used to load and attach packages from the library
 <ul>
-<li>attach means that the package is put in your <code>search</code> list (objects in the package can be used directly).</li>
+<li>“Attach” means that the package is put in your <code>search</code> list — objects in the package can be used directly</li>
 </ul></li>
-<li>Remember that package <span class="math inline">\(\neq\)</span> library!</li>
+<li>Remember that <strong>package <span class="math inline">\(\neq\)</span> library</strong></li>
 </ul>
 </section>
 <section id="what-we-want-to-talk-about-now" class="slide level2">
-<h2>What we want to talk about now</h2>
+<h2>What We Want to Talk About Now</h2>
 <ul>
 <li>How to write, build, test, and check your own package 😊</li>
-<li>How to do this in a good and sustainable way.</li>
-<li>Give tips and tricks based on practical experience.</li>
+<li>How to do this in a methodical and sustainable way</li>
+<li>Give tips and tricks based on practical experience</li>
 </ul>
 </section></section>
 <section>
 <section id="contents-of-a-package" class="title-slide slide level1 center">
-<h1>Contents of a package</h1>
+<h1>Contents of a Package</h1>
 
 </section>
 <section id="how-is-a-package-structured" class="slide level2">
-<h2>How is a package structured?</h2>
-<p>Package source = directory with files and subdirectories.</p>
+<h2>How is a Package Structured?</h2>
+<p>Package source = directory with files and subdirectories</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -451,7 +451,7 @@ Phil
 </ul>
 </div><div class="column" style="width:50%;">
 <ul>
-<li>Typically also:
+<li>Typically also includes:
 <ul>
 <li>data</li>
 <li>inst</li>
@@ -465,9 +465,9 @@ Phil
 </div>
 </section>
 <section id="how-to-get-started-quickly" class="slide level2">
-<h2>How to get started quickly</h2>
-<p>Once upon a time, developers would set up this structure manually. 🥱</p>
-<p>Nowadays, it is super fast with:</p>
+<h2>How to Get Started Quickly</h2>
+<p>Once upon a time, developers would set up this structure manually 🥱</p>
+<p>Nowadays, it’s super fast with:</p>
 <ul>
 <li><code>usethis::create_package()</code></li>
 <li>RStudio &gt; File &gt; New Project &gt; New Directory &gt; R Package</li>
@@ -477,35 +477,35 @@ Phil
 <section id="description-file" class="slide level2">
 <h2><code>DESCRIPTION</code> File</h2>
 <ul>
-<li><em>Package</em>: Choose the name of your package.
+<li><em>Package</em>: Choose the name of your package
 <ul>
 <li>Not unimportant!</li>
-<li>Check CRAN whether your name is still available.</li>
+<li>Check CRAN to see if your name is available</li>
 </ul></li>
-<li><em>Title</em>: Add a Title for Your Package. (Title Case)</li>
-<li><em>Version</em>: Start with a low package version.
+<li><em>Title</em>: Add a Title for Your Package (Title Case)</li>
+<li><em>Version</em>: Start with a low package version
 <ul>
 <li><code>Major.Minor.Patch</code> syntax</li>
 </ul></li>
-<li><em>Authors@R</em>: Add authors and maintainer.</li>
-<li><em>Description</em>: Like an abstract, including references.</li>
+<li><em>Authors@R</em>: Add authors and maintainer</li>
+<li><em>Description</em>: Like an abstract, including references</li>
 </ul>
 </section>
 <section id="description-file-contd" class="slide level2">
 <h2><code>DESCRIPTION</code> File (cont’d)</h2>
 <ul>
-<li><em>License</em>: Important for open sourcing.
+<li><em>License</em>: Important for open sourcing
 <ul>
-<li>Consider permissive licenses such as Apache and MIT.</li>
+<li>Consider permissive licenses such as Apache and MIT</li>
 </ul></li>
 <li><em>Depends</em>:
 <ul>
-<li>Which R version users need to have at least.</li>
-<li>Ideally don’t put any package here.</li>
-<li>Packages will be loaded and attached upon <code>library</code> your package.</li>
+<li>Which R version users need to have at a minimum</li>
+<li>Ideally don’t put any package here</li>
+<li>Packages will be loaded and attached upon <code>library</code> your package</li>
 </ul></li>
-<li><em>Imports</em>: Packages which you import functions, methods, classes from.</li>
-<li><em>Suggests</em>: Packages for documentation processing (<code>roxygen2</code>), running examples, tests (<code>testthat</code>), vignettes.</li>
+<li><em>Imports</em>: Packages which you import functions, methods, classes from</li>
+<li><em>Suggests</em>: Packages for documentation processing (<code>roxygen2</code>), running examples, tests (<code>testthat</code>), vignettes</li>
 </ul>
 </section>
 <section id="r-folder" class="slide level2">
@@ -517,7 +517,7 @@ Phil
 </ul></li>
 <li>Assigns R objects, i.e.&nbsp;mostly functions, but could also be constant variables, data sets, etc.</li>
 <li>Should not have any side effects, i.e.&nbsp;avoid <code>require()</code>, <code>options()</code> etc.</li>
-<li>If certain code needs to be sourced first, use on top of file (which will update the <code>Collate</code> field of <code>DESCRIPTION</code> automatically).</li>
+<li>If certain code needs to be sourced first, use on top of file (which will update the <code>Collate</code> field of <code>DESCRIPTION</code> automatically)</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#' @include dependency.R</span></span>
@@ -530,8 +530,8 @@ Phil
 <li>Defines the namespace of the package, to work with R’s namespace management system</li>
 <li>Namespace directives in this file allow to specify:
 <ul>
-<li>which objects are exported to users and other packages</li>
-<li>which are imported from other packages</li>
+<li>Which objects are exported to users and other packages</li>
+<li>Which are imported from other packages</li>
 </ul></li>
 </ul>
 </section>
@@ -556,19 +556,19 @@ Phil
 <li>The syntax is a bit similar to <code>LaTeX</code></li>
 </ul></li>
 <li>All user level objects should be documented</li>
-<li>Internal objects don’t need to be documented, but may be (and I would recommend it)</li>
-<li>Once upon a time, developers would set up these <code>.Rd</code> files and the <code>NAMESPACE</code> manually. 🥱</li>
+<li>Internal objects don’t need to be documented — but I recommend it!</li>
+<li>Once upon a time, developers would set up these <code>.Rd</code> files and the <code>NAMESPACE</code> manually 🥱</li>
 <li>Fortunately, nowadays we have <code>roxygen2</code>! 🚀</li>
 </ul>
 </section>
 <section id="roxygen2-to-the-rescue" class="slide level2">
 <h2><code>roxygen2</code> to the Rescue!</h2>
 <ul>
-<li>We can include the documentation source directly in the R script, on top of the objects we are documenting</li>
+<li>We can include the documentation source directly in the R script on top of the objects we are documenting</li>
 <li>Syntax is composed of special comments <code>#'</code> and special macros preceded with <code>@</code></li>
-<li>In RStudio running Build &gt; More &gt; Document will render the <code>.Rd</code> files and the <code>NAMESPACE</code> file for you</li>
+<li>In RStudio, running Build &gt; More &gt; Document will render the <code>.Rd</code> files and the <code>NAMESPACE</code> file for you</li>
 <li>Get started with <code>usethis::use_roxygen_md()</code></li>
-<li>Inside a function, click Code &gt; Insert Roxygen Skeleton</li>
+<li>Placing your cursor inside a function in RStudio, create a <code>roxygen2</code> skeleton with Code &gt; Insert Roxygen Skeleton</li>
 </ul>
 </section>
 <section id="setting-up-roxygen2-in-your-project" class="slide level2">
@@ -641,7 +641,7 @@ Phil
 <section id="tests-folder" class="slide level2">
 <h2><code>tests</code> Folder</h2>
 <ul>
-<li>Here we store the unit tests covering the functionality of the package</li>
+<li>Where store the unit tests covering the functionality of the package</li>
 <li>Get started with <code>usethis::use_testthat()</code> and <code>usethis::use_test()</code> and populate <code>tests/testthat</code> folder with unit tests</li>
 <li>Rarely, tests cannot be run within <code>testthat</code> framework, then these can go into R scripts directly in <code>tests</code> directory</li>
 <li>We will look at unit tests in detail later</li>
@@ -692,8 +692,8 @@ Phil
 <li>Much more complex to write and maintain than an R only package</li>
 <li>Typically only makes sense for
 <ul>
-<li>wrapping existing libraries for use in R</li>
-<li>speeding up complex computations - starting point: <code>Rcpp::Rcpp.package.skeleton()</code></li>
+<li>Wrapping existing libraries for use in R</li>
+<li>Speeding up complex computations — starting point: <code>Rcpp::Rcpp.package.skeleton()</code></li>
 </ul></li>
 </ul>
 </section>
@@ -721,48 +721,52 @@ Phil
 </section></section>
 <section>
 <section id="building-the-package" class="title-slide slide level1 center">
-<h1>Building the package</h1>
+<h1>Building the Package</h1>
 
 </section>
 <section id="documenting-the-package" class="slide level2">
-<h2>Documenting the package</h2>
+<h2>Documenting the Package</h2>
 <ul>
 <li>The first step is to produce the documentation files and <code>NAMESPACE</code></li>
 <li>In RStudio: Build &gt; More &gt; Document</li>
+<li>In the console: <code>devtools::document()</code></li>
 </ul>
 </section>
 <section id="checking-the-package" class="slide level2">
-<h2>Checking the package</h2>
+<h2>Checking the Package</h2>
 <ul>
 <li>R comes with pre-defined check command for packages: “the R package checker” aka <code>R CMD check</code></li>
 <li>About 22 checks are run (so quite a lot), including things like:
 <ul>
-<li>package can be installed</li>
-<li>is the code syntax ok</li>
-<li>is the documentation complete</li>
-<li>tests are run</li>
-<li>examples are being run</li>
+<li>Can the package be installed?</li>
+<li>Is the code syntax ok?</li>
+<li>Is the documentation complete?</li>
+<li>Do tests run successfully?</li>
+<li>Do examples run successfully?</li>
 </ul></li>
 <li>In RStudio: Build &gt; Check</li>
+<li>In the console: <code>devtools::check()</code></li>
 </ul>
 </section>
 <section id="building-the-package-1" class="slide level2">
-<h2>Building the package</h2>
+<h2>Building the Package</h2>
 <ul>
 <li>The R package folder can be compressed into a single package file</li>
 <li>Typically we manually only build “source” package
 <ul>
 <li>In RStudio: Build &gt; More &gt; Build Source Package</li>
-<li>Makes it easy to share the package with others and submit to CRAN</li>
+<li>In the console: <code>devtools::build()</code></li>
 </ul></li>
+<li>Makes it easy to share the package with others and submit to CRAN</li>
 </ul>
 </section>
 <section id="installing-the-package" class="slide level2">
-<h2>Installing the package</h2>
+<h2>Installing the Package</h2>
 <ul>
 <li>R comes with pre-defined install command for packages: <code>R CMD INSTALL</code></li>
 <li>In RStudio: Build &gt; Install</li>
-<li>Note: During development it is usually sufficient to use Build &gt; More &gt; Load All
+<li>In the console: <code>devtools::install()</code></li>
+<li>Note: During development it’s usually sufficient to use Build &gt; More &gt; Load All
 <ul>
 <li>Runs <code>devtools::load_all()</code></li>
 <li>Roughly simulates what happens when package would be installed and loaded</li>
@@ -782,7 +786,7 @@ Phil
 <li>Set up a new R package with a fancy name</li>
 <li>Fill out the <code>DESCRIPTION</code> file</li>
 <li>Include a new function</li>
-<li>Add roxygen documentation</li>
+<li>Add <code>roxygen2</code> documentation</li>
 <li>Export the function to the namespace</li>
 <li>Produce the package documentation</li>
 <li>Run checks</li>
@@ -800,10 +804,10 @@ Phil
 </section>
 
 <section id="license-information" class="title-slide slide level1 center">
-<h1>License information</h1>
+<h1>License Information</h1>
 <ul>
 <li>Creators (initial authors): Daniel Sabanes Bove <a href="https://github.com/danielinteractive/"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.linkedin.com/in/danielsabanesbove/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a>, Liming Li <a href="https://github.com/clarkliming"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a></li>
-<li>In the current version, changes were done by (later authors): TODO: FILL IN, OR IF NOT APPLICABLE DELETE THIS BULLET</li>
+<li>In the current version, changes were done by (later authors): Philippe Boileau <a href="https://pboileau.ca/"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"></path></svg></a></li>
 <li>This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</li>
 <li>The source files are hosted at <a href="https://github.com/openpharma/workshop-r-swe-mtl">github.com/openpharma/workshop-r-swe-mtl</a>, which is forked from the original version at <a href="https://github.com/openpharma/workshop-r-swe/">github.com/openpharma/workshop-r-swe</a>.</li>
 <li>Important: To use this work you must provide the name of the creators (initial authors), a link to the material, a link to the license, and indicate if changes were made</li>
