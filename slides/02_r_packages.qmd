@@ -289,7 +289,7 @@ export(my_sum)
 - R comes with pre-defined check command for packages: 
   "the R package checker" aka `R CMD check`
 - About 22 checks are run (so quite a lot), including things like:
-  - can the package be installed?
+  - Can the package be installed?
   - Is the code syntax ok?
   - Is the documentation complete?
   - Do tests run successfully?
